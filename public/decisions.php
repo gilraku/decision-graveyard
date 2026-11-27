@@ -23,7 +23,6 @@ function toast(string $message, array $extra = []): void
     foreach ($extra as $name) {
         $events[$name] = ['target' => 'body'];
     }
-    header('HX-Trigger: ' . json_encode($events, JSON_UNESCAPED_UNICODE));
 }
 
 function removed_card_response(DecisionRepository $repo, string $view): void
